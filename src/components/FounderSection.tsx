@@ -1,0 +1,87 @@
+
+import { Card, CardContent } from '@/components/ui/card';
+import { Quote } from 'lucide-react';
+
+const FounderSection = () => {
+  return (
+    <section id="founder" className="py-20 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
+              A Note from the Founder
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Founder Image */}
+            <div className="text-center lg:text-left">
+              <div className="relative inline-block">
+                <img 
+                  src="/lovable-uploads/a4b780f9-3334-4971-93f1-c5927d32b0eb.png" 
+                  alt="Shahram - Founder of Los Banditos" 
+                  className="w-80 h-80 rounde-3xl object-cover mx-auto retro-glow"
+                />
+                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-background border-2 border-border rounded-2xl px-6 py-3 shadow-lg">
+                  <p className="font-bold text-lg text-gradient">Shahram</p>
+                  <p className="text-sm text-muted-foreground">Founder & Chief Bandito</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Founder Message */}
+            <div>
+              <Card className="border-2 border-bandito-purple/20 bg-gradient-bandito-soft">
+                <CardContent className="p-8">
+                  <Quote className="w-8 h-8 text-bandito-purple mb-4" />
+                  <div className="space-y-4 text-foreground/90 leading-relaxed">
+                    <p>
+                      Los Banditos started as a small idea — a space where people could come together, 
+                      not just to have fun, but to care for each other and for those who need a little extra support.
+                    </p>
+                    <p>
+                      I've always believed that real happiness comes from shared experiences. Whether it's helping 
+                      someone in need, going on a late-night drive with friends, planning a trip, or just being 
+                      there when it matters — life feels better when we're connected.
+                    </p>
+                    <p>
+                      This community is built on kindness, laughter, adventure, and purpose. It belongs to all of us.
+                    </p>
+                    <p className="font-semibold text-bandito-purple">
+                      If you're someone who wants to enjoy life and make a difference, you're already one of us.
+                    </p>
+                    <p className="text-lg font-bold text-gradient">
+                      Welcome to Los Banditos.
+                    </p>
+                  </div>
+                  <div className="mt-6 pt-6 border-t border-border">
+                    <p className="font-semibold text-lg">Shahram</p>
+                    <p className="text-muted-foreground italic">Just another Bandito like you</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Team Section */}
+          <div className="mt-20">
+            <h3 className="text-3xl font-bold text-center mb-8 text-gradient">Meet the Team</h3>
+            <div className="flex justify-center">
+              <img 
+                src="/lovable-uploads/acdff4a3-a747-4bc9-9896-b429234abf01.png" 
+                alt="Los Banditos Team" 
+                className="rounded-3xl shadow-2xl max-w-full h-auto retro-glow"
+              />
+            </div>
+            <p className="text-center text-muted-foreground mt-6 max-w-2xl mx-auto">
+              Our diverse team of passionate individuals working together to create meaningful experiences 
+              and positive impact in our community.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default FounderSection;
