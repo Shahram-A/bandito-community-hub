@@ -22,7 +22,16 @@ const Hero = () => {
         <div className="text-center max-w-4xl mx-auto">
           {/* Flag emoji and main heading with enhanced animations */}
           <div className="mb-8 animate-bounce-in">
-            <span className="text-6xl mb-4 block animate-zoom-pulse">🏴‍☠️</span>
+            <div className="flex justify-center items-center gap-6 mb-6">
+              <span className="text-6xl animate-zoom-pulse">🏴‍☠️</span>
+              <img 
+                src="/lovable-uploads/5a538d18-86a7-4cae-9b99-fd812d05b1ad.png" 
+                alt="Banditos Patch" 
+                className="w-20 h-20 animate-float hover-lift retro-glow"
+                style={{ animationDelay: '1s' }}
+              />
+              <span className="text-6xl animate-zoom-pulse" style={{ animationDelay: '0.5s' }}>🤠</span>
+            </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient leading-tight animate-text-glow">
               Los Banditos
             </h1>

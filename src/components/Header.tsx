@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,8 +11,8 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
+          {/* Logo - now clickable */}
+          <Link to="/" className="flex items-center space-x-3 hover-lift transition-all duration-300">
             <img 
               src="/lovable-uploads/27f88fa2-6435-4890-af10-864fb949f126.png" 
               alt="Los Banditos Logo" 
@@ -21,7 +22,7 @@ const Header = () => {
               <h1 className="text-xl font-bold text-gradient">Los Banditos</h1>
               <p className="text-xs text-muted-foreground hidden sm:block">Live Fully. Give Freely. Grow Together.</p>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -36,9 +37,11 @@ const Header = () => {
             <Button variant="outline" className="border-bandito-purple text-bandito-purple hover:bg-bandito-purple hover:text-white">
               Login
             </Button>
-            <Button className="gradient-bandito text-white hover:opacity-90 retro-glow">
-              Join Now
-            </Button>
+            <Link to="/membership">
+              <Button className="gradient-bandito text-white hover:opacity-90 retro-glow">
+                Join Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -62,9 +65,11 @@ const Header = () => {
                 <Button variant="outline" className="border-bandito-purple text-bandito-purple hover:bg-bandito-purple hover:text-white">
                   Login
                 </Button>
-                <Button className="gradient-bandito text-white hover:opacity-90">
-                  Join Now
-                </Button>
+                <Link to="/membership">
+                  <Button className="gradient-bandito text-white hover:opacity-90">
+                    Join Now
+                  </Button>
+                </Link>
               </div>
             </nav>
           </div>

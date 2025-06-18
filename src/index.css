@@ -37,6 +37,13 @@
 
     --radius: 0.75rem;
 
+    /* Custom Bandito Colors */
+    --bandito-purple: 262 80% 50%;
+    --bandito-red: 0 84% 60%;
+    --bandito-gold: 43 89% 70%;
+    --bandito-brown: 30 67% 25%;
+    --bandito-tan: 39 77% 83%;
+
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -102,21 +109,32 @@
   }
 }
 
-/* Enhanced gradient backgrounds */
+/* Enhanced gradient backgrounds with cowboy/western vibes */
 .gradient-bandito {
-  background: linear-gradient(135deg, #7C3AED 0%, #DC2626 50%, #F59E0B 100%);
+  background: linear-gradient(135deg, #7C3AED 0%, #DC2626 35%, #8B4513 65%, #F59E0B 100%);
 }
 
 .gradient-bandito-soft {
-  background: linear-gradient(135deg, rgba(124, 58, 237, 0.15) 0%, rgba(220, 38, 38, 0.15) 50%, rgba(245, 158, 11, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.15) 0%, rgba(220, 38, 38, 0.15) 35%, rgba(139, 69, 19, 0.1) 65%, rgba(245, 158, 11, 0.1) 100%);
 }
 
 .gradient-bandito-dark {
-  background: linear-gradient(135deg, #5B21B6 0%, #991B1B 50%, #D97706 100%);
+  background: linear-gradient(135deg, #5B21B6 0%, #991B1B 35%, #654321 65%, #D97706 100%);
+}
+
+.gradient-western {
+  background: linear-gradient(45deg, #8B4513 0%, #D2691E 25%, #CD853F 50%, #DEB887 75%, #F4A460 100%);
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #7C3AED 0%, #DC2626 50%, #F59E0B 100%);
+  background: linear-gradient(135deg, #7C3AED 0%, #DC2626 35%, #8B4513 65%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-western {
+  background: linear-gradient(45deg, #8B4513 0%, #D2691E 50%, #DEB887 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -129,7 +147,7 @@
   background-clip: text;
 }
 
-/* Enhanced retro glow effects */
+/* Enhanced retro glow effects with western theme */
 .retro-glow {
   box-shadow: 
     0 0 20px rgba(124, 58, 237, 0.4), 
@@ -151,6 +169,13 @@
     0 0 80px rgba(245, 158, 11, 0.1);
 }
 
+.retro-glow-brown {
+  box-shadow: 
+    0 0 20px rgba(139, 69, 19, 0.4), 
+    0 0 40px rgba(139, 69, 19, 0.2),
+    0 0 80px rgba(139, 69, 19, 0.1);
+}
+
 .neon-glow {
   box-shadow: 
     0 0 5px #00FFFF,
@@ -159,7 +184,14 @@
     0 0 40px #00FFFF;
 }
 
-/* Neon cursor trail effect */
+.western-glow {
+  box-shadow: 
+    0 0 10px rgba(139, 69, 19, 0.6),
+    0 0 20px rgba(210, 105, 30, 0.4),
+    0 0 40px rgba(222, 184, 135, 0.2);
+}
+
+/* Neon cursor trail effect with bandito colors */
 .neon-follower {
   position: fixed;
   top: 0;
@@ -176,19 +208,58 @@
   transition: opacity 0.3s ease;
 }
 
-/* Complex animations */
+/* Complex animations with western/cowboy flair */
 @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   33% { transform: translateY(-20px) rotate(5deg); }
   66% { transform: translateY(-10px) rotate(-5deg); }
 }
 
+@keyframes lasso-spin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes horse-gallop {
+  0%, 100% { transform: translateX(0) scaleX(1); }
+  25% { transform: translateX(10px) scaleX(1.05); }
+  50% { transform: translateX(-5px) scaleX(0.95); }
+  75% { transform: translateX(15px) scaleX(1.1); }
+}
+
+@keyframes dust-cloud {
+  0% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 0.7; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(2); }
+}
+
 @keyframes pulse-rainbow {
   0% { box-shadow: 0 0 20px #7C3AED; }
-  25% { box-shadow: 0 0 20px #DC2626; }
-  50% { box-shadow: 0 0 20px #F59E0B; }
-  75% { box-shadow: 0 0 20px #00FFFF; }
+  20% { box-shadow: 0 0 20px #DC2626; }
+  40% { box-shadow: 0 0 20px #8B4513; }
+  60% { box-shadow: 0 0 20px #F59E0B; }
+  80% { box-shadow: 0 0 20px #00FFFF; }
   100% { box-shadow: 0 0 20px #7C3AED; }
+}
+
+@keyframes campfire-flicker {
+  0%, 100% { 
+    box-shadow: 0 0 20px #FF4500, 0 0 40px #FF6347, 0 0 60px #FFD700;
+    transform: scale(1);
+  }
+  25% { 
+    box-shadow: 0 0 15px #FF4500, 0 0 30px #FF6347, 0 0 45px #FFD700;
+    transform: scale(0.95);
+  }
+  50% { 
+    box-shadow: 0 0 25px #FF4500, 0 0 50px #FF6347, 0 0 75px #FFD700;
+    transform: scale(1.05);
+  }
+  75% { 
+    box-shadow: 0 0 18px #FF4500, 0 0 35px #FF6347, 0 0 55px #FFD700;
+    transform: scale(0.98);
+  }
 }
 
 @keyframes wave {
@@ -227,7 +298,9 @@
 
 @keyframes text-glow {
   0%, 100% { text-shadow: 0 0 5px #7C3AED, 0 0 10px #7C3AED; }
-  50% { text-shadow: 0 0 20px #DC2626, 0 0 30px #DC2626; }
+  25% { text-shadow: 0 0 20px #DC2626, 0 0 30px #DC2626; }
+  50% { text-shadow: 0 0 15px #8B4513, 0 0 25px #8B4513; }
+  75% { text-shadow: 0 0 25px #F59E0B, 0 0 35px #F59E0B; }
 }
 
 @keyframes gradient-shift {
@@ -236,33 +309,60 @@
   100% { background-position: 0% 50%; }
 }
 
+@keyframes wild-west-entrance {
+  0% { 
+    transform: translateX(-200px) rotate(-45deg) scale(0.5);
+    opacity: 0;
+  }
+  60% { 
+    transform: translateX(20px) rotate(5deg) scale(1.1);
+    opacity: 0.8;
+  }
+  100% { 
+    transform: translateX(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
 /* Animation classes */
 .animate-float { animation: float 6s ease-in-out infinite; }
+.animate-lasso-spin { animation: lasso-spin 4s linear infinite; }
+.animate-horse-gallop { animation: horse-gallop 2s ease-in-out infinite; }
+.animate-dust-cloud { animation: dust-cloud 3s ease-out infinite; }
 .animate-pulse-rainbow { animation: pulse-rainbow 3s ease-in-out infinite; }
+.animate-campfire-flicker { animation: campfire-flicker 2s ease-in-out infinite; }
 .animate-bounce-in { animation: bounce-in 0.8s ease-out; }
 .animate-slide-in-left { animation: slide-in-left 0.8s ease-out; }
 .animate-slide-in-right { animation: slide-in-right 0.8s ease-out; }
 .animate-zoom-pulse { animation: zoom-pulse 2s ease-in-out infinite; }
-.animate-text-glow { animation: text-glow 2s ease-in-out infinite; }
+.animate-text-glow { animation: text-glow 3s ease-in-out infinite; }
 .animate-gradient-shift { 
   background-size: 400% 400%;
   animation: gradient-shift 3s ease infinite;
 }
+.animate-wild-west-entrance { animation: wild-west-entrance 1.2s ease-out; }
 
-/* Hover effects */
+/* Enhanced hover effects with western theme */
 .hover-lift {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hover-lift:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
 }
 
 .hover-tilt {
   transition: transform 0.3s ease;
 }
 .hover-tilt:hover {
-  transform: perspective(1000px) rotateX(10deg) rotateY(-10deg);
+  transform: perspective(1000px) rotateX(15deg) rotateY(-15deg);
+}
+
+.hover-shake {
+  transition: transform 0.3s ease;
+}
+.hover-shake:hover {
+  animation: shake 0.5s ease-in-out;
 }
 
 .hover-glow {
@@ -293,21 +393,80 @@
   animation: gradient-shift 1s ease infinite;
 }
 
+.hover-western {
+  transition: all 0.3s ease;
+}
+.hover-western:hover {
+  background: linear-gradient(45deg, #8B4513, #D2691E, #CD853F, #DEB887, #F4A460);
+  background-size: 300% 300%;
+  animation: gradient-shift 1.5s ease infinite;
+  box-shadow: 0 0 20px rgba(139, 69, 19, 0.4);
+}
+
 /* Enhanced card effects */
 .card-3d {
   transform-style: preserve-3d;
   transition: transform 0.3s ease;
 }
 .card-3d:hover {
-  transform: rotateY(10deg) rotateX(5deg);
+  transform: rotateY(15deg) rotateX(10deg);
 }
 
-/* Profile picture styles */
+.card-western {
+  background: linear-gradient(135deg, rgba(139, 69, 19, 0.1), rgba(210, 105, 30, 0.05));
+  border: 2px solid rgba(139, 69, 19, 0.2);
+}
+
+/* Profile picture styles with western theme */
 .profile-pic {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid;
-  border-image: linear-gradient(45deg, #7C3AED, #DC2626, #F59E0B) 1;
+  border-image: linear-gradient(45deg, #7C3AED, #DC2626, #8B4513, #F59E0B) 1;
+  box-shadow: 0 0 30px rgba(139, 69, 19, 0.3);
 }
+
+.western-badge {
+  background: radial-gradient(circle, #8B4513, #654321);
+  border: 3px solid #D2691E;
+  box-shadow: 0 0 20px rgba(139, 69, 19, 0.5);
+}
+
+/* Custom scrollbar with western theme */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #8B4513, #654321);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #D2691E, #CD853F);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #F4A460, #DEB887);
+}
+
+/* Utility classes for bandito colors */
+.bg-bandito-purple { background-color: hsl(var(--bandito-purple)); }
+.bg-bandito-red { background-color: hsl(var(--bandito-red)); }
+.bg-bandito-gold { background-color: hsl(var(--bandito-gold)); }
+.bg-bandito-brown { background-color: hsl(var(--bandito-brown)); }
+.bg-bandito-tan { background-color: hsl(var(--bandito-tan)); }
+
+.text-bandito-purple { color: hsl(var(--bandito-purple)); }
+.text-bandito-red { color: hsl(var(--bandito-red)); }
+.text-bandito-gold { color: hsl(var(--bandito-gold)); }
+.text-bandito-brown { color: hsl(var(--bandito-brown)); }
+.text-bandito-tan { color: hsl(var(--bandito-tan)); }
+
+.border-bandito-purple { border-color: hsl(var(--bandito-purple)); }
+.border-bandito-red { border-color: hsl(var(--bandito-red)); }
+.border-bandito-gold { border-color: hsl(var(--bandito-gold)); }
+.border-bandito-brown { border-color: hsl(var(--bandito-brown)); }
+.border-bandito-tan { border-color: hsl(var(--bandito-tan)); }
