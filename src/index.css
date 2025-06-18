@@ -94,6 +94,7 @@
 
   body {
     @apply bg-background text-foreground font-inter;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -101,27 +102,212 @@
   }
 }
 
-/* Custom gradient backgrounds */
+/* Enhanced gradient backgrounds */
 .gradient-bandito {
-  background: linear-gradient(135deg, #7C3AED 0%, #DC2626 100%);
+  background: linear-gradient(135deg, #7C3AED 0%, #DC2626 50%, #F59E0B 100%);
 }
 
 .gradient-bandito-soft {
-  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.15) 0%, rgba(220, 38, 38, 0.15) 50%, rgba(245, 158, 11, 0.1) 100%);
+}
+
+.gradient-bandito-dark {
+  background: linear-gradient(135deg, #5B21B6 0%, #991B1B 50%, #D97706 100%);
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #7C3AED 0%, #DC2626 100%);
+  background: linear-gradient(135deg, #7C3AED 0%, #DC2626 50%, #F59E0B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Retro glow effects */
+.text-gradient-alt {
+  background: linear-gradient(45deg, #00FFFF 0%, #FF1493 50%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Enhanced retro glow effects */
 .retro-glow {
-  box-shadow: 0 0 20px rgba(124, 58, 237, 0.3), 0 0 40px rgba(124, 58, 237, 0.1);
+  box-shadow: 
+    0 0 20px rgba(124, 58, 237, 0.4), 
+    0 0 40px rgba(124, 58, 237, 0.2),
+    0 0 80px rgba(124, 58, 237, 0.1);
 }
 
 .retro-glow-red {
-  box-shadow: 0 0 20px rgba(220, 38, 38, 0.3), 0 0 40px rgba(220, 38, 38, 0.1);
+  box-shadow: 
+    0 0 20px rgba(220, 38, 38, 0.4), 
+    0 0 40px rgba(220, 38, 38, 0.2),
+    0 0 80px rgba(220, 38, 38, 0.1);
+}
+
+.retro-glow-gold {
+  box-shadow: 
+    0 0 20px rgba(245, 158, 11, 0.4), 
+    0 0 40px rgba(245, 158, 11, 0.2),
+    0 0 80px rgba(245, 158, 11, 0.1);
+}
+
+.neon-glow {
+  box-shadow: 
+    0 0 5px #00FFFF,
+    0 0 10px #00FFFF,
+    0 0 20px #00FFFF,
+    0 0 40px #00FFFF;
+}
+
+/* Neon cursor trail effect */
+.neon-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, #7C3AED, #DC2626);
+  border-radius: 50%;
+  filter: blur(6px) brightness(1.8);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+
+/* Complex animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-20px) rotate(5deg); }
+  66% { transform: translateY(-10px) rotate(-5deg); }
+}
+
+@keyframes pulse-rainbow {
+  0% { box-shadow: 0 0 20px #7C3AED; }
+  25% { box-shadow: 0 0 20px #DC2626; }
+  50% { box-shadow: 0 0 20px #F59E0B; }
+  75% { box-shadow: 0 0 20px #00FFFF; }
+  100% { box-shadow: 0 0 20px #7C3AED; }
+}
+
+@keyframes wave {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0.3) rotate(-45deg); opacity: 0; }
+  50% { transform: scale(1.05) rotate(-10deg); }
+  70% { transform: scale(0.9) rotate(0deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes slide-in-left {
+  0% { transform: translateX(-100%) rotate(-180deg); opacity: 0; }
+  100% { transform: translateX(0) rotate(0deg); opacity: 1; }
+}
+
+@keyframes slide-in-right {
+  0% { transform: translateX(100%) rotate(180deg); opacity: 0; }
+  100% { transform: translateX(0) rotate(0deg); opacity: 1; }
+}
+
+@keyframes zoom-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes text-glow {
+  0%, 100% { text-shadow: 0 0 5px #7C3AED, 0 0 10px #7C3AED; }
+  50% { text-shadow: 0 0 20px #DC2626, 0 0 30px #DC2626; }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Animation classes */
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-pulse-rainbow { animation: pulse-rainbow 3s ease-in-out infinite; }
+.animate-bounce-in { animation: bounce-in 0.8s ease-out; }
+.animate-slide-in-left { animation: slide-in-left 0.8s ease-out; }
+.animate-slide-in-right { animation: slide-in-right 0.8s ease-out; }
+.animate-zoom-pulse { animation: zoom-pulse 2s ease-in-out infinite; }
+.animate-text-glow { animation: text-glow 2s ease-in-out infinite; }
+.animate-gradient-shift { 
+  background-size: 400% 400%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hover-lift:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hover-tilt {
+  transition: transform 0.3s ease;
+}
+.hover-tilt:hover {
+  transform: perspective(1000px) rotateX(10deg) rotateY(-10deg);
+}
+
+.hover-glow {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.hover-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+.hover-glow:hover::before {
+  left: 100%;
+}
+
+.hover-rainbow {
+  transition: all 0.3s ease;
+}
+.hover-rainbow:hover {
+  background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+  background-size: 400% 400%;
+  animation: gradient-shift 1s ease infinite;
+}
+
+/* Enhanced card effects */
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+.card-3d:hover {
+  transform: rotateY(10deg) rotateX(5deg);
+}
+
+/* Profile picture styles */
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid;
+  border-image: linear-gradient(45deg, #7C3AED, #DC2626, #F59E0B) 1;
 }
