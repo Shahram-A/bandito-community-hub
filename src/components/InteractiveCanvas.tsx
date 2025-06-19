@@ -8,6 +8,8 @@ interface Particle {
   color: string;
   baseX: number;
   baseY: number;
+  draw(): void;
+  update(): void;
 }
 
 const InteractiveCanvas = () => {
@@ -25,7 +27,7 @@ const InteractiveCanvas = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    class ParticleClass {
+    class ParticleClass implements Particle {
       x: number;
       y: number;
       size: number;
