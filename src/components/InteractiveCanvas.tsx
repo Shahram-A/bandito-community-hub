@@ -48,7 +48,7 @@ const InteractiveCanvas = () => {
         ctx.beginPath();
         ctx.fillStyle = this.color;
         ctx.shadowColor = this.color;
-        ctx.shadowBlur = 10;
+        ctx.shadowBlur = 5;
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
       }
@@ -57,14 +57,14 @@ const InteractiveCanvas = () => {
         const dx = mouseRef.current.x - this.x;
         const dy = mouseRef.current.y - this.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
-        const force = (200 - dist) / 200;
+        const force = (150 - dist) / 150;
 
-        if (dist < 200) {
-          this.x -= dx * force * 0.05;
-          this.y -= dy * force * 0.05;
+        if (dist < 150) {
+          this.x -= dx * force * 0.03;
+          this.y -= dy * force * 0.03;
         } else {
-          this.x += (this.baseX - this.x) * 0.02;
-          this.y += (this.baseY - this.y) * 0.02;
+          this.x += (this.baseX - this.x) * 0.01;
+          this.y += (this.baseY - this.y) * 0.01;
         }
 
         this.draw();
@@ -73,10 +73,10 @@ const InteractiveCanvas = () => {
 
     const init = () => {
       particlesRef.current = [];
-      const spacing = 50;
+      const spacing = 60;
       for (let y = spacing; y < canvas.height; y += spacing) {
         for (let x = spacing; x < canvas.width; x += spacing) {
-          particlesRef.current.push(new ParticleClass(x, y, 3, '#7C3AED'));
+          particlesRef.current.push(new ParticleClass(x, y, 2, 'rgba(124, 58, 237, 0.3)'));
         }
       }
     };
@@ -113,7 +113,7 @@ const InteractiveCanvas = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0"
+      className="fixed inset-0 pointer-events-none z-0 opacity-60"
       style={{ background: 'transparent' }}
     />
   );
