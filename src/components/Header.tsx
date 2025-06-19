@@ -14,12 +14,12 @@ const Header = () => {
           {/* Logo - now with hover effects */}
           <Link to="/" className="flex items-center space-x-3 hover-lift transition-all duration-300 group">
             <img 
-              src="/lovable-uploads/27f88fa2-6435-4890-af10-864fb949f126.png" 
+              src="/lovable-uploads/0d6eac9a-aa81-4713-904c-88b07a62e72c.png" 
               alt="Los Banditos Logo" 
-              className="h-10 w-auto filter brightness-0 group-hover:filter-none transition-all duration-300"
+              className="h-10 w-auto filter brightness-0 group-hover:filter-none group-hover:drop-shadow-[0_0_10px_rgba(124,58,237,0.8)] transition-all duration-300"
             />
             <div>
-              <h1 className="text-xl font-bold text-foreground group-hover:text-gradient transition-all duration-300">Los Banditos</h1>
+              <h1 className="text-xl font-bold text-black group-hover:text-bandito-purple group-hover:drop-shadow-[0_0_10px_rgba(124,58,237,0.8)] transition-all duration-300">Los Banditos</h1>
               <p className="text-xs text-muted-foreground hidden sm:block">Live Fully. Give Freely. Grow Together.</p>
             </div>
           </Link>
@@ -38,7 +38,7 @@ const Header = () => {
               Login
             </Button>
             <Link to="/membership">
-              <Button className="gradient-bandito text-white hover:opacity-90 retro-glow">
+              <Button className="bg-black text-white hover:bg-bandito-purple hover:text-white hover:drop-shadow-[0_0_20px_rgba(124,58,237,0.8)] transition-all duration-300">
                 Join Now
               </Button>
             </Link>
@@ -66,7 +66,7 @@ const Header = () => {
                   Login
                 </Button>
                 <Link to="/membership">
-                  <Button className="gradient-bandito text-white hover:opacity-90">
+                  <Button className="bg-black text-white hover:bg-bandito-purple hover:text-white w-full">
                     Join Now
                   </Button>
                 </Link>

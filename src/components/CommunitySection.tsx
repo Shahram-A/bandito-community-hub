@@ -9,7 +9,7 @@ const CommunitySection = () => {
     <section id="community" className="py-20 bg-gradient-to-br from-background to-bandito-purple/5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black hover:text-bandito-purple hover:drop-shadow-[0_0_20px_rgba(124,58,237,0.8)] transition-all duration-300 cursor-default">
             What We Offer
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -25,7 +25,7 @@ const CommunitySection = () => {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-bandito-purple/20 flex items-center justify-center">
                 <PartyPopper className="w-8 h-8 text-bandito-purple" />
               </div>
-              <CardTitle className="text-2xl font-bold text-gradient">Fun & Adventure</CardTitle>
+              <CardTitle className="text-2xl font-bold text-black hover:text-bandito-purple hover:drop-shadow-[0_0_10px_rgba(124,58,237,0.8)] transition-all duration-300 cursor-default">Fun & Adventure</CardTitle>
               <CardDescription>Life's too short for boring weekends</CardDescription>
             </CardHeader>
             <CardContent className="text-center">
@@ -37,7 +37,7 @@ const CommunitySection = () => {
                 <li>Adventure missions & sports events</li>
               </ul>
               <Link to="/services">
-                <Button className="gradient-bandito text-white hover:opacity-90 hover-lift w-full">
+                <Button className="bg-black text-white hover:bg-bandito-purple hover:text-white hover:drop-shadow-[0_0_20px_rgba(124,58,237,0.8)] hover-lift w-full transition-all duration-300">
                   Explore Adventures
                 </Button>
               </Link>
@@ -50,7 +50,7 @@ const CommunitySection = () => {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-bandito-red/20 flex items-center justify-center">
                 <Heart className="w-8 h-8 text-bandito-red" />
               </div>
-              <CardTitle className="text-2xl font-bold text-gradient">Social Impact</CardTitle>
+              <CardTitle className="text-2xl font-bold text-black hover:text-bandito-purple hover:drop-shadow-[0_0_10px_rgba(124,58,237,0.8)] transition-all duration-300 cursor-default">Social Impact</CardTitle>
               <CardDescription>Together we make the world better</CardDescription>
             </CardHeader>
             <CardContent className="text-center">
@@ -62,7 +62,7 @@ const CommunitySection = () => {
                 <li>Social impact initiatives</li>
               </ul>
               <Link to="/services">
-                <Button className="gradient-bandito text-white hover:opacity-90 hover-lift w-full">
+                <Button className="bg-black text-white hover:bg-bandito-purple hover:text-white hover:drop-shadow-[0_0_20px_rgba(124,58,237,0.8)] hover-lift w-full transition-all duration-300">
                   Make a Difference
                 </Button>
               </Link>
@@ -75,7 +75,7 @@ const CommunitySection = () => {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-bandito-gold/20 flex items-center justify-center">
                 <GraduationCap className="w-8 h-8 text-bandito-gold" />
               </div>
-              <CardTitle className="text-2xl font-bold text-gradient">Learning & Growth</CardTitle>
+              <CardTitle className="text-2xl font-bold text-black hover:text-bandito-purple hover:drop-shadow-[0_0_10px_rgba(124,58,237,0.8)] transition-all duration-300 cursor-default">Learning & Growth</CardTitle>
               <CardDescription>Grow personally and professionally</CardDescription>
             </CardHeader>
             <CardContent className="text-center">
@@ -87,7 +87,7 @@ const CommunitySection = () => {
                 <li>Personal growth programs</li>
               </ul>
               <Link to="/services">
-                <Button className="gradient-bandito text-white hover:opacity-90 hover-lift w-full">
+                <Button className="bg-black text-white hover:bg-bandito-purple hover:text-white hover:drop-shadow-[0_0_20px_rgba(124,58,237,0.8)] hover-lift w-full transition-all duration-300">
                   Start Growing
                 </Button>
               </Link>
@@ -100,7 +100,7 @@ const CommunitySection = () => {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-500/20 flex items-center justify-center">
                 <Users className="w-8 h-8 text-green-500" />
               </div>
-              <CardTitle className="text-2xl font-bold text-gradient">Community Voice</CardTitle>
+              <CardTitle className="text-2xl font-bold text-black hover:text-bandito-purple hover:drop-shadow-[0_0_10px_rgba(124,58,237,0.8)] transition-all duration-300 cursor-default">Community Voice</CardTitle>
               <CardDescription>Your ideas shape our future</CardDescription>
             </CardHeader>
             <CardContent className="text-center">
@@ -112,7 +112,7 @@ const CommunitySection = () => {
                 <li>Community feedback & discussions</li>
               </ul>
               <Link to="/services">
-                <Button className="gradient-bandito text-white hover:opacity-90 hover-lift w-full">
+                <Button className="bg-black text-white hover:bg-bandito-purple hover:text-white hover:drop-shadow-[0_0_20px_rgba(124,58,237,0.8)] hover-lift w-full transition-all duration-300">
                   Join Discussions
                 </Button>
               </Link>
@@ -125,7 +125,7 @@ const CommunitySection = () => {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-cyan-500/20 flex items-center justify-center">
                 <Compass className="w-8 h-8 text-cyan-500" />
               </div>
-              <CardTitle className="text-2xl font-bold text-gradient">Free Services</CardTitle>
+              <CardTitle className="text-2xl font-bold text-black hover:text-bandito-purple hover:drop-shadow-[0_0_10px_rgba(124,58,237,0.8)] transition-all duration-300 cursor-default">Free Services</CardTitle>
               <CardDescription>Because family takes care of family</CardDescription>
             </CardHeader>
             <CardContent className="text-center">
@@ -137,7 +137,7 @@ const CommunitySection = () => {
                 <li>Tech recommendations</li>
               </ul>
               <Link to="/services">
-                <Button className="gradient-bandito text-white hover:opacity-90 hover-lift w-full">
+                <Button className="bg-black text-white hover:bg-bandito-purple hover:text-white hover:drop-shadow-[0_0_20px_rgba(124,58,237,0.8)] hover-lift w-full transition-all duration-300">
                   Get Free Help
                 </Button>
               </Link>
@@ -150,7 +150,7 @@ const CommunitySection = () => {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-pink-500/20 flex items-center justify-center">
                 <Lightbulb className="w-8 h-8 text-pink-500" />
               </div>
-              <CardTitle className="text-2xl font-bold text-gradient">Your Ideas Matter</CardTitle>
+              <CardTitle className="text-2xl font-bold text-black hover:text-bandito-purple hover:drop-shadow-[0_0_10px_rgba(124,58,237,0.8)] transition-all duration-300 cursor-default">Your Ideas Matter</CardTitle>
               <CardDescription>Shape the future of Los Banditos</CardDescription>
             </CardHeader>
             <CardContent className="text-center">
@@ -162,7 +162,7 @@ const CommunitySection = () => {
                 <li>Lead innovation initiatives</li>
               </ul>
               <Link to="/services">
-                <Button className="gradient-bandito text-white hover:opacity-90 hover-lift w-full">
+                <Button className="bg-black text-white hover:bg-bandito-purple hover:text-white hover:drop-shadow-[0_0_20px_rgba(124,58,237,0.8)] hover-lift w-full transition-all duration-300">
                   Share Your Ideas
                 </Button>
               </Link>
@@ -172,14 +172,14 @@ const CommunitySection = () => {
 
         {/* Clean Call to Action */}
         <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold mb-4 text-gradient">Ready to Join the Adventure?</h3>
+          <h3 className="text-2xl font-bold mb-4 text-black hover:text-bandito-purple hover:drop-shadow-[0_0_10px_rgba(124,58,237,0.8)] transition-all duration-300 cursor-default">Ready to Join the Adventure?</h3>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
             Become part of something bigger than yourself. Connect, grow, and make a difference with Los Banditos.
           </p>
           <Link to="/membership">
             <Button 
               size="lg" 
-              className="gradient-bandito text-white hover:opacity-90 px-12 py-6 text-xl font-bold hover-lift"
+              className="bg-black text-white hover:bg-bandito-purple hover:text-white hover:drop-shadow-[0_0_20px_rgba(124,58,237,0.8)] px-12 py-6 text-xl font-bold hover-lift transition-all duration-300"
             >
               Join Los Banditos Now
             </Button>

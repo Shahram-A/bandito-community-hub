@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <img 
-                src="/lovable-uploads/27f88fa2-6435-4890-af10-864fb949f126.png" 
+                src="/lovable-uploads/0d6eac9a-aa81-4713-904c-88b07a62e72c.png" 
                 alt="Los Banditos Logo" 
                 className="h-12 w-auto filter brightness-0 invert"
               />
@@ -45,10 +45,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Get Started</h4>
             <div className="space-y-3">
-              <Button className="w-full gradient-bandito text-white hover:opacity-90">
+              <Button className="w-full bg-black text-white hover:bg-bandito-purple hover:text-white hover:drop-shadow-[0_0_20px_rgba(124,58,237,0.8)] transition-all duration-300">
                 Join Now
               </Button>
-              <Button variant="outline" className="w-full border-white text-white hover:bg-white hover:text-bandito-dark">
+              <Button variant="outline" className="w-full border-white text-white bg-transparent hover:bg-white hover:text-bandito-dark transition-all duration-300">
                 See Events
               </Button>
               <Button variant="ghost" className="w-full text-bandito-gold hover:bg-bandito-gold/10">

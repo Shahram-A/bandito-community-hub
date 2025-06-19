@@ -4,12 +4,12 @@ import Hero from '@/components/Hero';
 import CommunitySection from '@/components/CommunitySection';
 import FounderSection from '@/components/FounderSection';
 import Footer from '@/components/Footer';
-import DragonCursor from '@/components/DragonCursor';
+import TorchCursor from '@/components/TorchCursor';
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <DragonCursor />
+      <TorchCursor />
       <Header />
       <Hero />
       <CommunitySection />

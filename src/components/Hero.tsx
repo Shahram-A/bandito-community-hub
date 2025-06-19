@@ -30,7 +30,7 @@ const Hero = () => {
                 className="w-16 h-16 animate-float hover-lift filter brightness-0 hover:filter-none transition-all duration-300"
               />
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground hover:text-gradient transition-all duration-300 leading-tight cursor-default">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-black hover:text-bandito-purple hover:drop-shadow-[0_0_20px_rgba(124,58,237,0.8)] transition-all duration-300 leading-tight cursor-default">
               Los Banditos
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground font-medium mb-8 hover:text-bandito-purple transition-all duration-300 cursor-default">
@@ -74,7 +74,7 @@ const Hero = () => {
             <Link to="/membership">
               <Button 
                 size="lg" 
-                className="gradient-bandito text-white hover:opacity-90 px-8 py-6 text-lg font-semibold group hover-lift"
+                className="bg-black text-white hover:bg-bandito-purple hover:text-white hover:drop-shadow-[0_0_20px_rgba(124,58,237,0.8)] px-8 py-6 text-lg font-semibold group hover-lift transition-all duration-300"
               >
                 Join the Banditos
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -84,7 +84,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-bandito-purple text-bandito-purple hover:bg-bandito-purple hover:text-white px-8 py-6 text-lg font-semibold hover-lift"
+                className="border-2 border-black text-black hover:bg-bandito-purple hover:text-white hover:border-bandito-purple hover:drop-shadow-[0_0_20px_rgba(124,58,237,0.8)] px-8 py-6 text-lg font-semibold hover-lift transition-all duration-300"
               >
                 See Our Services
               </Button>
