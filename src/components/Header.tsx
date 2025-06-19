@@ -11,15 +11,15 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo - now clickable */}
-          <Link to="/" className="flex items-center space-x-3 hover-lift transition-all duration-300">
+          {/* Logo - now with hover effects */}
+          <Link to="/" className="flex items-center space-x-3 hover-lift transition-all duration-300 group">
             <img 
               src="/lovable-uploads/27f88fa2-6435-4890-af10-864fb949f126.png" 
               alt="Los Banditos Logo" 
-              className="h-10 w-auto"
+              className="h-10 w-auto filter brightness-0 group-hover:filter-none transition-all duration-300"
             />
             <div>
-              <h1 className="text-xl font-bold text-gradient">Los Banditos</h1>
+              <h1 className="text-xl font-bold text-foreground group-hover:text-gradient transition-all duration-300">Los Banditos</h1>
               <p className="text-xs text-muted-foreground hidden sm:block">Live Fully. Give Freely. Grow Together.</p>
             </div>
           </Link>

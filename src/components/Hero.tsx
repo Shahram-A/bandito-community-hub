@@ -27,24 +27,24 @@ const Hero = () => {
               <img 
                 src="/lovable-uploads/27f88fa2-6435-4890-af10-864fb949f126.png" 
                 alt="Los Banditos Logo" 
-                className="w-16 h-16 animate-float hover-lift"
+                className="w-16 h-16 animate-float hover-lift filter brightness-0 hover:filter-none transition-all duration-300"
               />
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground hover:text-gradient transition-all duration-300 leading-tight cursor-default">
               Los Banditos
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground font-medium mb-8">
+            <p className="text-xl md:text-2xl text-muted-foreground font-medium mb-8 hover:text-bandito-purple transition-all duration-300 cursor-default">
               Live Fully. Give Freely. Grow Together.
             </p>
           </div>
 
           {/* Clean description */}
           <div className="mb-12">
-            <p className="text-lg md:text-xl text-foreground/80 mb-6 leading-relaxed">
+            <p className="text-lg md:text-xl text-foreground/80 mb-6 leading-relaxed hover:text-bandito-purple transition-all duration-300 cursor-default">
               We're not just a club. We're a movement.<br />
               A family that parties together, helps together, and grows together.
             </p>
-            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto hover:text-bandito-purple transition-all duration-300 cursor-default">
               Join a community where adventure meets purpose, where fun activities blend with meaningful social impact, 
               and where every member has a voice in shaping our journey.
             </p>
@@ -54,17 +54,17 @@ const Hero = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center p-6 rounded-2xl bg-background/50 backdrop-blur-sm border border-border hover-lift transition-all duration-300">
               <Users className="w-8 h-8 text-bandito-purple mx-auto mb-3" />
-              <h3 className="font-semibold text-lg mb-2">Community First</h3>
+              <h3 className="font-semibold text-lg mb-2 text-foreground hover:text-bandito-purple transition-all duration-300 cursor-default">Community First</h3>
               <p className="text-sm text-muted-foreground">Connect, share, and grow with like-minded people</p>
             </div>
             <div className="text-center p-6 rounded-2xl bg-background/50 backdrop-blur-sm border border-border hover-lift transition-all duration-300">
               <Heart className="w-8 h-8 text-bandito-red mx-auto mb-3" />
-              <h3 className="font-semibold text-lg mb-2">Social Impact</h3>
+              <h3 className="font-semibold text-lg mb-2 text-foreground hover:text-bandito-purple transition-all duration-300 cursor-default">Social Impact</h3>
               <p className="text-sm text-muted-foreground">Make a difference through charity and community service</p>
             </div>
             <div className="text-center p-6 rounded-2xl bg-background/50 backdrop-blur-sm border border-border hover-lift transition-all duration-300">
               <Rocket className="w-8 h-8 text-bandito-gold mx-auto mb-3" />
-              <h3 className="font-semibold text-lg mb-2">Adventure Awaits</h3>
+              <h3 className="font-semibold text-lg mb-2 text-foreground hover:text-bandito-purple transition-all duration-300 cursor-default">Adventure Awaits</h3>
               <p className="text-sm text-muted-foreground">Tours, parties, drives, and unforgettable experiences</p>
             </div>
           </div>
